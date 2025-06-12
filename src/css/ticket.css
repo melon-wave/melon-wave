@@ -1,0 +1,224 @@
+@font-face {
+    font-family: "Pretendard-Regular";
+    src:
+            url("../assets/font/Pretendard-Regular.woff") format("woff"),
+            url("../assets/font/Pretendard-Regular.woff")
+            format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Pretendard-Bold";
+    src: url("../assets/font/Pretendard-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+.regular-font {
+    font-family: "Pretendard-Regular", sans-serif;
+}
+.bold-font {
+    font-family: "Pretendard-Bold", sans-serif;
+}
+
+.ticket-wrap {
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ticket-wrap h3 {
+    padding-bottom: 16px;
+    font-size: 30px;
+
+    span {
+        display: inline-block;
+        width: 100px;
+        height: 30px;
+        background-color: #fff;
+        color: black;
+        border-radius: 20px;
+        font-size: 18px;
+        vertical-align: middle;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+.premium-ticket-list {
+    width: 1200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.premium-ticket-list li {
+    width: 100%;
+    height: 200px;
+    padding: 0 50px;
+
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(237, 0, 0, 0.25);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.premium-ticket-list li:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 20px 20px rgba(237, 0, 0, 0.25);
+}
+.premium-ticket-list li h4 {
+    width: 100%;
+    font-size: 30px;
+    img {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 6px;
+        left: 8px;
+    }
+}
+.premium-ticket-list li p {
+    font-size: 20px;
+    margin-top:8px;
+}
+.premium-ticket-list li .ticket-price p {
+    font-size: 26px;
+}
+.ticket-vertical-line {
+    width: 1px;
+    height: 70px;
+
+    position: relative;
+    left: -150px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.premium-ticket-list li .ticket-price button {
+    width: 76px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+
+    border-radius: 20px;
+    background-color: black;
+}
+.premium-ticket-list li .ticket-price {
+    display: flex;
+    gap: 30px;
+}
+
+@keyframes move-waves {
+    0% {
+        transform: translate(0, 0);
+        background-color: #0095ff;
+    }
+    100% {
+        transform: translate(0px, 150px);
+        background-color: lightseagreen;
+    }
+}
+.waves-wrap {
+    z-index: -1;
+}
+.waves-wrap .waves {
+    height: 1278px;
+    display: flex;
+    gap: 40px;
+
+    position: fixed;
+    right: -100px;
+    bottom: -400px;
+
+    transform: rotate(-45deg);
+}
+.waves-wrap .waves li {
+    width: 100px;
+    background-color: #0095ff;
+    border-radius: 10px;
+}
+.waves-wrap .waves li:nth-child(1) {
+    animation-name: move-waves;
+    animation-duration: 0.38s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.waves-wrap .waves li:nth-child(1):hover {
+    translate: 30px 30px;
+    transition: 0.3s ease-out;
+}
+.waves-wrap .waves li:nth-child(2) {
+    animation-name: move-waves;
+    animation-duration: 0.53s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.waves-wrap .waves li:nth-child(2):hover {
+    translate: 30px 30px;
+    transition: 0.44s ease-in-out;
+}
+.waves-wrap .waves li:nth-child(3) {
+    animation-name: move-waves;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.waves-wrap .waves li:nth-child(3):hover {
+    translate: 30px 30px;
+    transition: 0.42s ease;
+}
+.waves-wrap .waves li:nth-child(4) {
+    animation-name: move-waves;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.waves-wrap .waves li:nth-child(4):hover {
+    translate: 30px 30px;
+    transition: 0.38s linear;
+}
+.waves-wrap .waves li:nth-child(5) {
+    animation-name: move-waves;
+    animation-duration: 0.65s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.waves-wrap .waves li:nth-child(5):hover {
+    translate: 30px 30px;
+    transition: 0.43s ease-in;
+}
+.waves-wrap .waves li:nth-child(6) {
+    animation-name: move-waves;
+    animation-duration: 0.44s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.waves-wrap .waves li:nth-child(6):hover {
+    translate: 30px 30px;
+    transition: 0.4s ease-out;
+}
+.waves-wrap .waves li:nth-child(7) {
+    animation-name: move-waves;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.waves-wrap .waves li:nth-child(7):hover {
+    translate: 30px 30px;
+    transition: 0.5s linear;
+}
+
+.test img {
+    width: 200px;
+}
