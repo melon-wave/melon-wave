@@ -3,7 +3,570 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>melon-chart | melon wave</title>
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/melon-chart.css" />
+    <title>멜론 차트 | melon wave</title>
   </head>
-  <body></body>
+  <body>
+    <section id="melon-chart-area">
+      <div class="title-container">
+        <h2 class="title">멜론 차트</h2>
+        <p class="subtitle">음악이 필요한 순간, 멜론</p>
+      </div>
+      <div class="melon-chart-container">
+        <div class="wave-background">
+          <div class="wave wave1"></div>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+        </div>
+        <div class="chart-container">
+          <h3>Top100</h3>
+          <div class="table-container">
+            <table class="chart-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>곡 정보</th>
+                  <th>아티스트</th>
+                  <th>앨범</th>
+                  <th>좋아요</th>
+                  <th>재생 시간</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- 차트 데이터 정적으로 포함 -->
+                <tr class="song-row" data-id="1">
+                  <td class="position-cell">
+                    <span class="position-number">1</span>
+                    <span class="position-change">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#02cd3b"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="position-icon"
+                      >
+                        <path d="m18 15-6-6-6 6" />
+                      </svg>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="song-info">
+                      <div class="song-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M9 18V5l12-2v13"></path>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                        <div class="play-button-container">
+                          <button class="play-button" data-id="1">
+                            <svg
+                              class="play-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              style="margin-left: 2px"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <svg
+                              class="pause-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <rect x="6" y="4" width="4" height="16"></rect>
+                              <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="song-title">너에게 닿기를</div>
+                    </div>
+                  </td>
+                  <td class="artist">10CM</td>
+                  <td class="album">너에게 닿기를</td>
+                  <td class="likes">10.1M</td>
+                  <td class="duration">3:45</td>
+                  <td>
+                    <div class="wave-animation">
+                      <div class="wave-bars">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="song-row" data-id="2">
+                  <td class="position-cell">
+                    <span class="position-number">2</span>
+                    <span class="position-change">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#ef4444"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="position-icon"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="song-info">
+                      <div class="song-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M9 18V5l12-2v13"></path>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                        <div class="play-button-container">
+                          <button class="play-button" data-id="2">
+                            <svg
+                              class="play-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              style="margin-left: 2px"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <svg
+                              class="pause-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <rect x="6" y="4" width="4" height="16"></rect>
+                              <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="song-title">Drowning</div>
+                    </div>
+                  </td>
+                  <td class="artist">WOODZ</td>
+                  <td class="album">OO-LI</td>
+                  <td class="likes">21M</td>
+                  <td class="duration">4:12</td>
+                  <td>
+                    <div class="wave-animation">
+                      <div class="wave-bars">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="song-row" data-id="3">
+                  <td class="position-cell">
+                    <span class="position-number">3</span>
+                    <span class="position-change">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#02cd3b"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="position-icon"
+                      >
+                        <path d="m18 15-6-6-6 6" />
+                      </svg>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="song-info">
+                      <div class="song-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M9 18V5l12-2v13"></path>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                        <div class="play-button-container">
+                          <button class="play-button" data-id="3">
+                            <svg
+                              class="play-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              style="margin-left: 2px"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <svg
+                              class="pause-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <rect x="6" y="4" width="4" height="16"></rect>
+                              <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="song-title">Never Ending Story</div>
+                    </div>
+                  </td>
+                  <td class="artist">아이유</td>
+                  <td class="album">꽃갈피 셋</td>
+                  <td class="likes">5M</td>
+                  <td class="duration">3:28</td>
+                  <td>
+                    <div class="wave-animation">
+                      <div class="wave-bars">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="song-row" data-id="4">
+                  <td class="position-cell">
+                    <span class="position-number">4</span>
+                    <span class="position-change">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#ef4444"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="position-icon"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="song-info">
+                      <div class="song-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M9 18V5l12-2v13"></path>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                        <div class="play-button-container">
+                          <button class="play-button" data-id="4">
+                            <svg
+                              class="play-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              style="margin-left: 2px"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <svg
+                              class="pause-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <rect x="6" y="4" width="4" height="16"></rect>
+                              <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="song-title">모르시나요(PROD.로코베리)</div>
+                    </div>
+                  </td>
+                  <td class="artist">조째즈</td>
+                  <td class="album">모르시나요</td>
+                  <td class="likes">7.9M</td>
+                  <td class="duration">3:56</td>
+                  <td>
+                    <div class="wave-animation">
+                      <div class="wave-bars">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="song-row" data-id="5">
+                  <td class="position-cell">
+                    <span class="position-number">5</span>
+                    <span class="position-change">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#ef4444"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="position-icon"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="song-info">
+                      <div class="song-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M9 18V5l12-2v13"></path>
+                          <circle cx="6" cy="18" r="3"></circle>
+                          <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                        <div class="play-button-container">
+                          <button class="play-button" data-id="5">
+                            <svg
+                              class="play-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              style="margin-left: 2px"
+                            >
+                              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <svg
+                              class="pause-icon"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <rect x="6" y="4" width="4" height="16"></rect>
+                              <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="song-title">like JENNIE</div>
+                    </div>
+                  </td>
+                  <td class="artist">제니 (JENNIE)</td>
+                  <td class="album">Ruby</td>
+                  <td class="likes">8.5M</td>
+                  <td class="duration">4:32</td>
+                  <td>
+                    <div class="wave-animation">
+                      <div class="wave-bars">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <footer class="melon-chart-footer">
+        <a href="#" class="view-like-button"
+          >차트 보러 가기
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="arrow-icon"
+          >
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </footer>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 현재 재생 중인 곡의 ID
+        let currPlaying = null;
+
+        // 모든 play 버튼에 이벤트 리스너 추가
+        document.querySelectorAll(".play-button").forEach((button) => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const songId = this.getAttribute("data-id");
+            const songRow = document.querySelector(
+              `.song-row[data-id="${songId}"]`
+            );
+
+            // 이미 재생 중인 곡이면 일시정지
+            if (currPlaying === songId) {
+              songRow.classList.remove("is-playing");
+              this.classList.remove("is-playing");
+              currPlaying = null;
+            }
+            // 다른 곡이 재생 중이면 그 곡을 중지하고 새 곡 재생
+            else {
+              // 이전에 재생 중이던 곡이 있으면 중지
+              if (currPlaying) {
+                document
+                  .querySelector(`.song-row[data-id="${currPlaying}"]`)
+                  .classList.remove("is-playing");
+                document
+                  .querySelector(`.play-button[data-id="${currPlaying}"]`)
+                  .classList.remove("is-playing");
+              }
+
+              // 새 곡 재생
+              songRow.classList.add("is-playing");
+              this.classList.add("is-playing");
+              currPlaying = songId;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
