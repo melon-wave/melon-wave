@@ -64,7 +64,7 @@ section#melon-chart-area {
 /* 멜론 차트 컨테이너 */
 section#melon-chart-area .melon-chart-container {
   max-width: 1200px;
-  padding: 5em 2em;
+  padding: 4em 2em;
   margin: 0 auto;
   position: relative;
 
@@ -75,6 +75,15 @@ section#melon-chart-area .melon-chart-container {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 
   animation: fade-in 1s ease-in-out;
+
+  & h3 {
+    position: relative;
+    top: -0.5em;
+    font-weight: 700;
+    font-size: 1.25em;
+    margin-left: 1em;
+    margin-bottom: 2em;
+  }
 }
 
 @keyframes fade-in {
