@@ -19,9 +19,19 @@
 .bold-font {
     font-family: "Pretendard-Bold", sans-serif;
 }
+.hidden-section {
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.visible-section {
+    opacity: 1;
+    transition: all 0.2s linear;
+}
 
 .ticket-wrap {
     margin-top: 100px;
+    /*todo: 임시*/
+    height: 1800px;
 
     display: flex;
     flex-direction: column;
@@ -98,7 +108,7 @@
 
     background-color: rgba(255, 255, 255, 0.2);
 }
-.premium-ticket-list li .ticket-price button {
+.premium-ticket-list li .ticket-price a {
     width: 76px;
     color: #fff;
     font-size: 18px;
@@ -106,6 +116,8 @@
 
     border-radius: 20px;
     background-color: black;
+    cursor: pointer;
+    text-align: center;
 }
 .premium-ticket-list li .ticket-price {
     display: flex;
