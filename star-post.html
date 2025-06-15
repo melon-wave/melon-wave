@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>star-post</title>
-    </head>
-    <body>
-        
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>star-post</title>
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/star-post.css" />
+</head>
+<body>
+    <section id="target1"></section>
+
+    <section id="target2" class="star-post">
+        <div class="container">
+            <main class="star-post-content">
+                <header class="slide">
+                    <h1 class="text">ARTIST POST</h1>
+                </header>
+                <div class="content">
+                    <div class="main-title">ARTIST POST</div>
+                    <div class="content-left">
+                        <span class="sub-title">NOW</span>
+                        <p>
+                            아티스트가 직접 쓴 스토리와 추천음악까지!<br />
+                            아티스트들의 최신 소식을 실시간으로 확인하세요.
+                        </p>
+                        <section class="art-rank-wrap" aria-labelledby="artist-rank">
+                            <h2 class="art-title" id="artist-rank-title">ARTIST RANK</h2>
+                            <div class="art-list">
+                                <ol id="artist" >
+                                    <li>아이유</li>
+                                    <li>세븐틴</li>
+                                    <li>BOYNEXTDOOR</li>
+                                    <li>QWER</li>
+                                    <li>ATEEZ(에이티즈)</li>
+                                    <li>asepa</li>
+                                    <li>DAY6</li>
+                                    <li>j-hope</li>
+                                    <li>G-DRAGON</li>
+                                    <li>IVE(아이브)</li>
+                                </ol>
+                            </div>
+                            
+                        </section>
+                        <section class="artRank5">
+                            <div class="rank-wrap-right">
+                                <h2 class="title">
+                                    아티스크 RANK<br/>
+                                    <span>TOP 5</span>
+                                </h2>
+                                <ul>
+                                    <li class="artist artist1 active"><span class="rank">1.</span>아이유</li>
+                                    <li class="artist artist2"><span class="rank">2.</span>세븐틴</li>
+                                    <li class="artist artist3"><span class="rank">3.</span>BOYNEXTDOOR</li>
+                                    <li class="artist artist4"><span class="rank">4.</span>QWER</li>
+                                    <li class="artist artist5"><span class="rank">5.</span>ATEEZ(에이티즈)</li>
+                                </ul>
+                            </div>
+                            <div class="rank-wrap-left">
+                                <div class="share">
+                                        <p class="label">점유율</p>
+                                        <div class="percent-circle">
+                                            <span class="percent-text">11%</span>
+                                        </div>
+                                    <p class="desc">점유율은 TOP10 아티스트에 대한 이용량 중 선택한 아티스트의 이용량이 차지하는 비율입니다.</p>
+                                </div>
+
+                                <div class="fan-info">
+                                    <h3>이 아티스트의 팬은?</h3>
+
+                                    <div class="gender">
+                                    <p>성별비율</p>
+                                    <div class="gender-bar">
+                                        <span class="male" style="width: 43%;">43%</span>
+                                        <span class="female" style="width: 57%;">57%</span>
+                                    </div>
+                                    </div>
+
+                                    <div class="age">
+                                    <p>연령별 비율</p>
+                                    <div class="age-bars">
+                                        <div class="age-group"><div class="bar bar1" style="height: 10px;"></div><span>10대</span></div>
+                                        <div class="age-group"><div class="bar bar2" style="height: 37px;"></div><span>20대</span></div>
+                                        <div class="age-group"><div class="bar bar3" style="height: 25px;"></div><span>30대</span></div>
+                                        <div class="age-group"><div class="bar bar4" style="height: 16px;"></div><span>40대</span></div>
+                                        <div class="age-group"><div class="bar bar5" style="height: 12px;"></div><span>50대</span></div>
+                                        <div class="age-group"><div class="bar bar6" style="height: 2px;"></div><span>기타</span></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="content-right">
+                        <section>
+                            <h2 class="sr-only">ARTIST POST</h2>
+                            <section class="album-scroll" id="albumContainer">
+                            </section>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <section id="target3"></section>
+    <script src="./src/js/star-post.js"></script>
+</body>
 </html>
