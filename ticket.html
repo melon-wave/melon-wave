@@ -11,11 +11,25 @@
         <style>
             /*FIXME: 임시코드*/
             .empty1 {
-                height: 3600px;
+                height: 1800px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h1 {
+                    font-size: 32px;
+                }
             }
             /*FIXME: 임시코드*/
             .empty2 {
-                height: 3600px;
+                height: 1800px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h1 {
+                    font-size: 32px;
+                }
             }
             .line {
                 width: 100%;
@@ -25,15 +39,28 @@
         </style>
     </head>
     <body class="regular-font">
-        <main class="ticket-main bg-parallax">
-            <!--            <section class="empty1"></section>-->
-            <!--            <section class="line"></section>-->
-            <!--            <section class="empty2"></section>-->
-            <!--            <section class="line"></section>-->
+        <!--fixme:임시코드-->
+        <section class="empty1">
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+        </section>
+        <section class="line"></section>
+        <section class="empty2">
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+        </section>
+        <section class="line"></section>
 
+        <section class="ticket-main bg-parallax">
             <h2 class="sr-only">멜론 이용권</h2>
-            <!--            <section class="ticket-wrap hidden-section">-->
-            <section class="ticket-wrap">
+            <section class="ticket-wrap hidden-section">
+                <!--            <section class="ticket-wrap">-->
                 <ul class="ticket-list">
                     <li>
                         <h3 class="bold-font">
@@ -209,43 +236,43 @@
                                     </ul>
                                 </li>
 
-                                <!--                                <li class="ticket-item">-->
-                                <!--                                    <h5 class="bold-font">개별곡 다운로드</h5>-->
-                                <!--                                    <p>-->
-                                <!--                                        월정액 이용권 없이도 1곡씩 다운로드-->
-                                <!--                                        가능합니다.-->
-                                <!--                                    </p>-->
-                                <!--                                    <dl>-->
-                                <!--                                        <div>-->
-                                <!--                                            <dt>MP3 다운로드</dt>-->
-                                <!--                                            <dd>700원</dd>-->
-                                <!--                                        </div>-->
-                                <!--                                        <div>-->
-                                <!--                                            <dt>FLAC 다운로드</dt>-->
-                                <!--                                            <dd>1,000원</dd>-->
-                                <!--                                        </div>-->
-                                <!--                                    </dl>-->
-                                <!--                                </li>-->
-                                <!--                                <li class="ticket-item">-->
-                                <!--                                    <h5 class="bold-font">-->
-                                <!--                                        뮤직비디오 다운로드-->
-                                <!--                                    </h5>-->
-                                <!--                                    <p>고화질 뮤직비디오를 소장하세요!</p>-->
-                                <!--                                    <dl>-->
-                                <!--                                        <div>-->
-                                <!--                                            <dt>Full HD</dt>-->
-                                <!--                                            <dd>2,000원</dd>-->
-                                <!--                                        </div>-->
-                                <!--                                        <div>-->
-                                <!--                                            <dt>HD</dt>-->
-                                <!--                                            <dd>1,500원</dd>-->
-                                <!--                                        </div>-->
-                                <!--                                        <div>-->
-                                <!--                                            <dt>일반화질</dt>-->
-                                <!--                                            <dd>1,000원</dd>-->
-                                <!--                                        </div>-->
-                                <!--                                    </dl>-->
-                                <!--                                </li>-->
+                                <li class="ticket-item">
+                                    <h5 class="bold-font">개별곡 다운로드</h5>
+                                    <p>
+                                        월정액 이용권 없이도 1곡씩 다운로드
+                                        가능합니다.
+                                    </p>
+                                    <dl>
+                                        <div>
+                                            <dt>MP3 다운로드</dt>
+                                            <dd>700원</dd>
+                                        </div>
+                                        <div>
+                                            <dt>FLAC 다운로드</dt>
+                                            <dd>1,000원</dd>
+                                        </div>
+                                    </dl>
+                                </li>
+                                <li class="ticket-item">
+                                    <h5 class="bold-font">
+                                        뮤직비디오 다운로드
+                                    </h5>
+                                    <p>고화질 뮤직비디오를 소장하세요!</p>
+                                    <dl>
+                                        <div>
+                                            <dt>Full HD</dt>
+                                            <dd>2,000원</dd>
+                                        </div>
+                                        <div>
+                                            <dt>HD</dt>
+                                            <dd>1,500원</dd>
+                                        </div>
+                                        <div>
+                                            <dt>일반화질</dt>
+                                            <dd>1,000원</dd>
+                                        </div>
+                                    </dl>
+                                </li>
                             </ul>
 
                             <button class="etc-ticket-list-btn right">
@@ -281,6 +308,6 @@
                     </ul>
                 </div>
             </section>
-        </main>
+        </section>
     </body>
 </html>

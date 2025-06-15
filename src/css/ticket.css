@@ -18,10 +18,12 @@
 }
 .ticket-main {
     padding-left: 100px;
-    min-width: 1100px;
+    min-width: 1400px;
+    min-height: 1400px;
     overflow-x: auto;
 
     background-color: #121212;
+    /*background-color: #fff;*/
     color: #fff;
 
     position: relative;
@@ -233,9 +235,15 @@
 .etc-ticket-list {
     display: flex;
     gap: 30px;
+
+    padding: 10px 0 10px 0;
+
+    overflow: scroll;
 }
+
 .ticket-item {
     width: 100%;
+    min-width: 300px;
     padding: 30px 25px;
     word-break: keep-all;
 
@@ -305,6 +313,7 @@
     align-items: center;
 
     position: relative;
+
     left: -80px;
 
     .etc-ticket-list-btn {
