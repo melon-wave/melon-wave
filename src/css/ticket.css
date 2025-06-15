@@ -1,9 +1,8 @@
 @font-face {
     font-family: "Pretendard-Regular";
     src:
-            url("../assets/font/Pretendard-Regular.woff") format("woff"),
-            url("../assets/font/Pretendard-Regular.woff")
-            format("woff");
+        url("../assets/font/Pretendard-Regular.woff") format("woff"),
+        url("../assets/font/Pretendard-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -13,11 +12,37 @@
     font-weight: bold;
     font-style: normal;
 }
+:root {
+    --default-border-radius: 10px;
+    --h5-font-size: 24px;
+}
+.ticket-main {
+    padding-left: 100px;
+    min-width: 1400px;
+    min-height: 1400px;
+    overflow-x: auto;
+
+    background-color: #121212;
+    /*background-color: #fff;*/
+    color: #fff;
+
+    position: relative;
+    z-index: 0;
+}
+
 .regular-font {
     font-family: "Pretendard-Regular", sans-serif;
 }
 .bold-font {
     font-family: "Pretendard-Bold", sans-serif;
+}
+.hidden-section {
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.visible-section {
+    opacity: 1;
+    transition: all 0.2s linear;
 }
 
 .ticket-wrap {
@@ -29,9 +54,9 @@
 }
 .ticket-wrap h3 {
     padding-bottom: 16px;
-    font-size: 30px;
+    font-size: 24px;
 
-    span {
+    span.premium {
         display: inline-block;
         width: 100px;
         height: 30px;
@@ -45,8 +70,14 @@
     }
 }
 
+.ticket-list {
+}
+.ticket-list > li:not(:first-child) {
+    margin-top: 100px;
+}
+
 .premium-ticket-list {
-    width: 1200px;
+    max-width: 1100px;
 
     display: flex;
     flex-direction: column;
@@ -55,36 +86,48 @@
 }
 .premium-ticket-list li {
     width: 100%;
-    height: 200px;
+    min-height: 160px;
     padding: 0 50px;
 
-    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-    border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(237, 0, 0, 0.25);
+    /*background: linear-gradient(*/
+    /*    90deg,*/
+    /*    rgba(131, 58, 180, 1) 0%,*/
+    /*    rgba(253, 29, 29, 1) 50%,*/
+    /*    rgba(252, 176, 69, 1) 100%*/
+    /*);*/
+    background: #3f5efb;
+    background: linear-gradient(
+        220deg,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+    );
+
+    border-radius: var(--default-border-radius);
+    box-shadow: 0 10px 20px rgba(237, 0, 0, 0.25);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .premium-ticket-list li:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: 0.3s ease-in-out;
-    box-shadow: 0px 20px 20px rgba(237, 0, 0, 0.25);
+    box-shadow: 0 20px 20px rgba(237, 0, 0, 0.25);
 }
-.premium-ticket-list li h4 {
+.premium-ticket-list li h5 {
     width: 100%;
-    font-size: 30px;
+    font-size: var(--h5-font-size);
     img {
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         position: relative;
-        top: 6px;
+        top: 4px;
         left: 8px;
     }
 }
 .premium-ticket-list li p {
-    font-size: 20px;
-    margin-top:8px;
+    font-size: 18px;
+    margin-top: 8px;
 }
 .premium-ticket-list li .ticket-price p {
     font-size: 26px;
@@ -93,19 +136,20 @@
     width: 1px;
     height: 70px;
 
-    position: relative;
-    left: -150px;
+    position: absolute;
+    left: 50%;
 
     background-color: rgba(255, 255, 255, 0.2);
 }
-.premium-ticket-list li .ticket-price button {
+.premium-ticket-list li .ticket-price a {
     width: 76px;
-    color: #fff;
     font-size: 18px;
     line-height: 40px;
 
     border-radius: 20px;
     background-color: black;
+    cursor: pointer;
+    text-align: center;
 }
 .premium-ticket-list li .ticket-price {
     display: flex;
@@ -113,33 +157,30 @@
 }
 
 @keyframes move-waves {
-    0% {
-        transform: translate(0, 0);
-        background-color: #0095ff;
-    }
     100% {
         transform: translate(0px, 150px);
         background-color: lightseagreen;
     }
 }
 .waves-wrap {
+    position: absolute;
     z-index: -1;
 }
 .waves-wrap .waves {
     height: 1278px;
     display: flex;
-    gap: 40px;
+    gap: 30px;
 
     position: fixed;
-    right: -100px;
-    bottom: -400px;
+    right: -640px;
+    bottom: -480px;
 
-    transform: rotate(-45deg);
+    transform: rotate(-65deg);
 }
 .waves-wrap .waves li {
     width: 100px;
     background-color: #0095ff;
-    border-radius: 10px;
+    border-radius: var(--default-border-radius);
 }
 .waves-wrap .waves li:nth-child(1) {
     animation-name: move-waves;
@@ -148,20 +189,12 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-.waves-wrap .waves li:nth-child(1):hover {
-    translate: 30px 30px;
-    transition: 0.3s ease-out;
-}
 .waves-wrap .waves li:nth-child(2) {
     animation-name: move-waves;
     animation-duration: 0.53s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-.waves-wrap .waves li:nth-child(2):hover {
-    translate: 30px 30px;
-    transition: 0.44s ease-in-out;
 }
 .waves-wrap .waves li:nth-child(3) {
     animation-name: move-waves;
@@ -170,20 +203,12 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-.waves-wrap .waves li:nth-child(3):hover {
-    translate: 30px 30px;
-    transition: 0.42s ease;
-}
 .waves-wrap .waves li:nth-child(4) {
     animation-name: move-waves;
     animation-duration: 0.8s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-.waves-wrap .waves li:nth-child(4):hover {
-    translate: 30px 30px;
-    transition: 0.38s linear;
 }
 .waves-wrap .waves li:nth-child(5) {
     animation-name: move-waves;
@@ -192,33 +217,128 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-.waves-wrap .waves li:nth-child(5):hover {
-    translate: 30px 30px;
-    transition: 0.43s ease-in;
-}
 .waves-wrap .waves li:nth-child(6) {
     animation-name: move-waves;
-    animation-duration: 0.44s;
+    animation-duration: 0.45s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-.waves-wrap .waves li:nth-child(6):hover {
-    translate: 30px 30px;
-    transition: 0.4s ease-out;
 }
 .waves-wrap .waves li:nth-child(7) {
     animation-name: move-waves;
-    animation-duration: 0.6s;
+    animation-duration: 0.39s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-.waves-wrap .waves li:nth-child(7):hover {
-    translate: 30px 30px;
-    transition: 0.5s linear;
+
+.etc-ticket-list {
+    display: flex;
+    gap: 30px;
+
+    padding: 10px 0 10px 0;
+
+    overflow: scroll;
 }
 
-.test img {
-    width: 200px;
+.ticket-item {
+    width: 100%;
+    min-width: 300px;
+    padding: 30px 25px;
+    word-break: keep-all;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--default-border-radius);
+
+    background: linear-gradient(
+        135deg,
+        rgba(40, 40, 45, 0.9) 0%,
+        rgba(50, 30, 80, 0.85) 100%
+    );
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.3s ease-in-out;
+
+    h5 {
+        font-size: var(--h5-font-size);
+        margin-bottom: 5px;
+    }
+    p {
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+    dl {
+        dt {
+            color: rgba(255, 255, 255, 0.6);
+            margin: 30px 0 5px 0;
+            font-size: 18px;
+        }
+        dd {
+            margin-left: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+    dl div:first-child {
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    ul {
+        margin-top: 20px;
+        list-style-type: disc;
+        li {
+            margin-top: 10px;
+        }
+    }
+}
+.ticket-item:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 15px 25px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+        135deg,
+        rgba(45, 45, 50, 0.95) 0%,
+        rgba(60, 35, 90, 0.9) 100%
+    );
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.etc-ticket-list-wrap {
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    left: -80px;
+
+    .etc-ticket-list-btn {
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+    }
+    .etc-ticket-list-btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+    }
+    .etc-ticket-list-btn:active {
+        transform: translateY(1px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+    .left {
+        margin-right: 30px;
+    }
+    .right {
+        margin-left: 30px;
+    }
 }
