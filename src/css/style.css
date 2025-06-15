@@ -13,3 +13,11 @@ body {
     background-color: #121212;
     color: #fff;
 }
+.hidden-section {
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.visible-section {
+    opacity: 1;
+    transition: all 0.2s linear;
+}

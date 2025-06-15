@@ -9,17 +9,27 @@
         <link rel="stylesheet" href="./src/css/ticket.css" />
         <script src="./src/js/ticket.js" defer></script>
         <style>
-            body {
-                background-color: #121212;
-                color: #fff;
-            }
-            /*FIXME: 임시코드로 각자 수정필요*/
+            /*FIXME: 임시코드*/
             .empty1 {
-                height: 3600px;
+                height: 1800px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h1 {
+                    font-size: 32px;
+                }
             }
-            /*FIXME: 임시코드로 각자 수정필요*/
+            /*FIXME: 임시코드*/
             .empty2 {
-                height: 3600px;
+                height: 1800px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h1 {
+                    font-size: 32px;
+                }
             }
             .line {
                 width: 100%;
@@ -29,65 +39,263 @@
         </style>
     </head>
     <body class="regular-font">
-        <main>
-            <!--상건-->
-            <section class="empty1"></section>
-            <section class="line"></section>
+        <!--fixme:임시코드-->
+        <section class="empty1">
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+        </section>
+        <section class="line"></section>
+        <section class="empty2">
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+            <h1>아래로</h1>
+        </section>
+        <section class="line"></section>
 
-            <!--상철-->
-            <section class="empty2"></section>
-            <section class="line"></section>
-
+        <section class="ticket-main bg-parallax">
             <h2 class="sr-only">멜론 이용권</h2>
             <section class="ticket-wrap hidden-section">
+                <!--            <section class="ticket-wrap">-->
                 <ul class="ticket-list">
                     <li>
                         <h3 class="bold-font">
-                            무제한 듣기 + 오프라인 재생 <span>PREMIUM</span>
+                            무제한 듣기 + 오프라인 재생
+                            <span class="premium">PREMIUM</span>
                         </h3>
-                        <ul class="premium-ticket-list">
-                            <li>
-                                <div class="ticket-title">
-                                    <h4>
-                                        스트리밍 플러스 정기결제
-                                        <button>
-                                            <img
-                                                src="./src/assets/img/btn-info-white.png"
-                                                alt="이용권 자세히 보기"
-                                            />
-                                        </button>
-                                    </h4>
+                        <section>
+                            <h4 class="sr-only">프리미엄 이용권 목록</h4>
+                            <ul class="premium-ticket-list">
+                                <li>
+                                    <div class="ticket-title">
+                                        <h5 class="bold-font">
+                                            스트리밍 플러스 정기결제
+                                            <button>
+                                                <img
+                                                    src="./src/assets/img/btn-info-white.png"
+                                                    alt="이용권 자세히 보기"
+                                                />
+                                            </button>
+                                        </h5>
 
-                                    <p>무제한 듣기 + 오프라인 재생</p>
-                                </div>
-                                <div class="ticket-vertical-line"></div>
-                                <div class="ticket-price">
-                                    <p>10,900원</p>
-                                    <a href="#">구매</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="ticket-title">
-                                    <h4>
-                                        스트리밍 플러스 티켓 30일이용권
-                                        <button>
-                                            <img
-                                                src="./src/assets/img/btn-info-white.png"
-                                                alt="이용권 자세히 보기"
-                                            />
-                                        </button>
-                                    </h4>
-                                    <p>무제한 듣기 + 오프라인 재생</p>
-                                </div>
-                                <div class="ticket-vertical-line"></div>
-                                <div class="ticket-price">
-                                    <p>11,400원</p>
-                                    <a href="#">구매</a>
-                                </div>
-                            </li>
-                        </ul>
+                                        <p>무제한 듣기 + 오프라인 재생</p>
+                                    </div>
+                                    <div class="ticket-vertical-line"></div>
+                                    <div class="ticket-price">
+                                        <p>10,900원</p>
+                                        <a href="#">구매</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ticket-title">
+                                        <h5 class="bold-font">
+                                            스트리밍 플러스 티켓 30일이용권
+                                            <button>
+                                                <img
+                                                    src="./src/assets/img/btn-info-white.png"
+                                                    alt="이용권 자세히 보기"
+                                                />
+                                            </button>
+                                        </h5>
+                                        <p>무제한 듣기 + 오프라인 재생</p>
+                                    </div>
+                                    <div class="ticket-vertical-line"></div>
+                                    <div class="ticket-price">
+                                        <p>11,400원</p>
+                                        <a href="#">구매</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </li>
+                    <li>
+                        <h3 class="bold-font">제휴 이용권</h3>
+                        <section class="etc-ticket-list-wrap">
+                            <h4 class="sr-only">기타 이용권 목록</h4>
+
+                            <button class="etc-ticket-list-btn left">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    stroke="white"
+                                    stroke-width="2"
+                                    viewBox="0 0 24 24"
+                                    width="48"
+                                    height="48"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M15 5l-7 7 7 7"
+                                    />
+                                </svg>
+                            </button>
+
+                            <ul class="etc-ticket-list">
+                                <li class="ticket-item">
+                                    <h5 class="bold-font">
+                                        멜론 익스트리밍 플러스
+                                    </h5>
+                                    <p>SK텔레콤 LTE 기본 요금제 가입자 대상</p>
+                                    <dl>
+                                        <div>
+                                            <dt>제공서비스</dt>
+                                            <dd>
+                                                모바일/PC 무제한 듣기 + 멜론
+                                                스트리밍 데이터 무제한
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt>이용요금</dt>
+                                            <dd>매월 10,700원 (VAT 포함)</dd>
+                                        </div>
+                                    </dl>
+                                    <ul>
+                                        <li>
+                                            SK텔레콤 대리점이나
+                                            고객센터(1599-0011), Tworld
+                                            사이트에서 멜론 익스트리밍
+                                            플러스(부가서비스)를 먼저 가입하신
+                                            후 인증해 주세요.
+                                        </li>
+                                        <li>
+                                            모바일과 PC, NUGU에서 무제한으로
+                                            듣기가 가능하며, 인증하신 휴대폰으로
+                                            멜론 스트리밍 시 LTE데이터가
+                                            차감되지 않습니다. (단, 비디오는
+                                            제외)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="ticket-item">
+                                    <h5 class="bold-font">멜론 익스트리밍</h5>
+                                    <p>SK텔레콤 LTE 기본 요금제 가입자 대상</p>
+                                    <dl>
+                                        <div>
+                                            <dt>제공서비스</dt>
+                                            <dd>
+                                                모바일 무제한 듣기 + 멜론
+                                                스트리밍 데이터 무제한
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt>이용요금</dt>
+                                            <dd>매월 8,300원 (VAT 포함)</dd>
+                                        </div>
+                                    </dl>
+                                    <ul>
+                                        <li>
+                                            SK텔레콤 대리점이나
+                                            고객센터(1599-0011), Tworld
+                                            사이트에서 멜론 익스트리밍
+                                            (부가서비스)을 먼저 가입하신 후
+                                            인증해 주세요.
+                                        </li>
+                                        <li>
+                                            본 서비스는 모바일 전용이며,
+                                            인증하신 휴대폰으로 멜론 스트리밍 시
+                                            LTE데이터가 차감되지 않습니다. (단,
+                                            비디오는 제외)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="ticket-item">
+                                    <h5 class="bold-font">
+                                        멜론 프리티켓 공동 프로모션
+                                    </h5>
+                                    <p>
+                                        프로모션 대상 휴대폰 이용자 대상 (매월
+                                        인증)
+                                    </p>
+                                    <dl>
+                                        <div>
+                                            <dt>제공서비스</dt>
+                                            <dd>
+                                                무제한 듣기 + 무제한 다운로드
+                                            </dd>
+                                        </div>
+                                        <div>
+                                            <dt>이용요금</dt>
+                                            <dd>매월 무료</dd>
+                                        </div>
+                                    </dl>
+                                    <ul>
+                                        <li>
+                                            다운로드 파일은 DRM(무단 복제 방지
+                                            기술) 이 적용되어 있어, 매월 기간
+                                            연장이 필요합니다.
+                                        </li>
+                                        <li>
+                                            PC 및 인증하신 SKT 휴대폰에서만 이용
+                                            가능합니다.
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="ticket-item">
+                                    <h5 class="bold-font">개별곡 다운로드</h5>
+                                    <p>
+                                        월정액 이용권 없이도 1곡씩 다운로드
+                                        가능합니다.
+                                    </p>
+                                    <dl>
+                                        <div>
+                                            <dt>MP3 다운로드</dt>
+                                            <dd>700원</dd>
+                                        </div>
+                                        <div>
+                                            <dt>FLAC 다운로드</dt>
+                                            <dd>1,000원</dd>
+                                        </div>
+                                    </dl>
+                                </li>
+                                <li class="ticket-item">
+                                    <h5 class="bold-font">
+                                        뮤직비디오 다운로드
+                                    </h5>
+                                    <p>고화질 뮤직비디오를 소장하세요!</p>
+                                    <dl>
+                                        <div>
+                                            <dt>Full HD</dt>
+                                            <dd>2,000원</dd>
+                                        </div>
+                                        <div>
+                                            <dt>HD</dt>
+                                            <dd>1,500원</dd>
+                                        </div>
+                                        <div>
+                                            <dt>일반화질</dt>
+                                            <dd>1,000원</dd>
+                                        </div>
+                                    </dl>
+                                </li>
+                            </ul>
+
+                            <button class="etc-ticket-list-btn right">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    stroke="white"
+                                    stroke-width="2"
+                                    viewBox="0 0 24 24"
+                                    width="48"
+                                    height="48"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M9 5l7 7-7 7"
+                                    />
+                                </svg>
+                            </button>
+                        </section>
                     </li>
                 </ul>
+
                 <div class="waves-wrap">
                     <ul class="waves">
                         <li></li>
@@ -100,6 +308,6 @@
                     </ul>
                 </div>
             </section>
-        </main>
+        </section>
     </body>
 </html>
