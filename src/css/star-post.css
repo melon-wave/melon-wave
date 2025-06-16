@@ -9,19 +9,30 @@
     --main-color: #02cd3b;
 }
 
+.star-post-content {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
 * {
     font-family: 'Pretendard-Regular';
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-#target1, #target2, #target3 {
-    width: 100vw;
-    height: 100vh;
-    background-color: blue;
-}
-
 main.star-post-content {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.8)), url("../assets/img/star-post-bg.png") no-repeat center center;
@@ -121,7 +132,7 @@ main .content {
     animation: scroll-left 10s linear infinite;
 }
 
-#artist:hover ol {
+#artist:hover  {
     animation-play-state: paused;
 }
 
