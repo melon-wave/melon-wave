@@ -1,6 +1,4 @@
 const ticketWrap = document.querySelector(".ticket-wrap");
-const empty1 = document.querySelector(".empty1");
-const empty2 = document.querySelector(".empty2");
 
 const observer = new IntersectionObserver(
     (entries) => {
@@ -54,6 +52,4 @@ const observer = new IntersectionObserver(
     }
 );
 
-observer.observe(empty1);
-observer.observe(empty2);
 observer.observe(ticketWrap);
