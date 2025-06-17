@@ -108,7 +108,7 @@ const albumImages = document.querySelectorAll('.album .album-img');
 albumImages.forEach(img => {
     img.addEventListener('mouseenter', () => {
         const bg = img.dataset.bg;
-        container.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.8)), url('${bg}')`;
+        container.style.backgroundImage = `linear-gradient(rgba(18,18,18,0.8)), url('${bg}')`;
     });
     img.addEventListener('mouseleave', () => {
         container.style.backgroundImage = originalBg;

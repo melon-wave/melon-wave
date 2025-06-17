@@ -35,7 +35,7 @@
 }
 main.star-post-content {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.8)), url("../assets/img/star-post-bg.png") no-repeat center center;
+    background: linear-gradient(rgba(18, 18, 18, 0.8)), url("../assets/img/star-post-bg.png") no-repeat center center;
     background-color: #121212;
     background-size: contain;
     position: relative;

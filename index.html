@@ -4,20 +4,24 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>melon wave</title>
+        <link rel="stylesheet" href="src/css/reset.css">
         <style>
             body {
                 background-color: #121212;
             }
             iframe {
                 border: none;
-                width: 100vw;
+                width: calc(100vw - 0.8vw);
                 height: 100vh;
+            }
+            .ticket{
+                height: 1400px;
             }
         </style>
     </head>
     <body>
         <iframe src="./melon-chart.html"></iframe>
         <iframe src="./star-post.html"></iframe>
-        <iframe src="./ticket.html"></iframe>
+        <iframe class="ticket" src="./ticket.html"></iframe>
     </body>
 </html>
